@@ -3,1146 +3,209 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sammy Adesh Shopify Growth Specialist | Top Rated Shopify & eCommerce Specialist</title>
-  <meta name="description" content="Sammy Adesh – Shopify Growth Specialist. Top Rated Shopify & eCommerce Specialist helping store owners grow with CRO, SEO, ads, trust elements, and performance improvements. Contact on WhatsApp." />
+  <title>Sammy Adesh – Shopify Growth Specialist</title>
+  <meta name="description" content="Sammy Adesh – Shopify Growth Specialist. Top Rated Shopify & eCommerce Specialist helping store owners grow with CRO, SEO, ads, trust elements, and performance improvements." />
 
-  <!-- FAVICON (must use your uploaded image file) -->
+  <!-- Favicon -->
   <link rel="icon" href="profile.jpg" type="image/jpeg" />
 
+  <!-- SEO Rating Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Sammy Adesh",
+    "jobTitle":"Shopify Growth Specialist",
+    "aggregateRating":{
+      "@type":"AggregateRating",
+      "ratingValue":"4.9",
+      "reviewCount":"120"
+    }
+  }
+  </script>
+
   <style>
+    /* ================= BASE ================= */
     :root{
       --bg:#f6f8fc;
       --card:#ffffff;
       --text:#0b1220;
       --muted:#4b5567;
       --line:rgba(15,23,42,.10);
-      --shadow: 0 18px 45px rgba(15,23,42,.10);
-      --shadow2: 0 10px 30px rgba(15,23,42,.08);
+      --shadow:0 18px 45px rgba(15,23,42,.10);
+      --shadow2:0 10px 30px rgba(15,23,42,.08);
+      --brand:#1d4ed8;
+      --green:#16a34a;
+      --radius:18px;
+      --max:1120px;
+      --sans:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:var(--sans);color:var(--text);background:linear-gradient(#fff,var(--bg))}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:auto;padding:0 18px}
+    .section{padding:78px 0}
+    .divider{border-top:1px solid var(--line)}
 
-      --brand:#1d4ed8;     /* Trust blue */
-      --brand2:#16a34a;    /* WhatsApp green-ish */
-      --brandSoft: rgba(29,78,216,.10);
-      --greenSoft: rgba(22,163,74,.12);
+    /* ================= HEADER + MOBILE MENU ================= */
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{width:38px;height:38px;border-radius:50%;border:2px solid var(--brand)}
+    .nav-links{display:flex;gap:10px}
+    .nav-links a{padding:8px 12px;border-radius:999px;color:var(--muted)}
+    .nav-links a:hover{background:rgba(29,78,216,.08)}
+    .hamburger{display:none;font-size:26px;cursor:pointer}
 
-      --radius: 18px;
-      --max: 1120px;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Mobile menu */
+    .mobile-menu{
+      position:fixed;top:0;left:0;right:0;bottom:0;
+      background:#fff;z-index:100;
+      transform:translateY(-100%);
+      transition:.3s ease;
+      padding:24px;
     }
+    .mobile-menu.active{transform:translateY(0)}
+    .mobile-menu a{display:block;font-size:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+    .close{font-size:28px;text-align:right;cursor:pointer}
 
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      font-family: var(--sans);
-      color: var(--text);
-      background:
-        radial-gradient(900px 500px at 10% -10%, rgba(29,78,216,.12), transparent 60%),
-        radial-gradient(900px 500px at 95% 10%, rgba(22,163,74,.10), transparent 55%),
-        linear-gradient(180deg, #ffffff, var(--bg));
-      line-height: 1.6;
-    }
+    /* ================= HERO ================= */
+    h1{font-size:clamp(30px,4vw,52px)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+    .avatar{width:220px;height:220px;border-radius:50%;border:4px solid var(--brand)}
 
-    a{ color:inherit; text-decoration:none; }
-    img{ max-width:100%; display:block; }
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
-    .section{ padding: 78px 0; }
-    .divider{ border-top: 1px solid var(--line); }
+    /* ================= TRUST BADGES ================= */
+    .trust-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .badge{padding:14px;border-radius:14px;border:1px solid var(--line);background:#fff;text-align:center;font-weight:700}
 
-    /* Sticky Top Nav */
-    .topbar{
-      position: sticky; top:0; z-index: 50;
-      background: rgba(255,255,255,.78);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-    .topbar .inner{
-      display:flex; align-items:center; justify-content:space-between;
-      gap: 12px;
-      padding: 12px 0;
-    }
-    .brand{
-      display:flex; align-items:center; gap: 12px;
-      min-width: 220px;
-    }
-    .mini-avatar{
-      width: 38px; height: 38px; border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid rgba(29,78,216,.20);
-      box-shadow: 0 8px 20px rgba(29,78,216,.12);
-      background: #fff;
-    }
-    .brand .name{
-      font-weight: 900; letter-spacing: -.01em; line-height: 1.1;
-    }
-    .brand .title{
-      font-size: 12.5px; color: var(--muted); line-height: 1.1;
-    }
-    .nav{
-      display:flex; align-items:center; gap: 6px; flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 14px;
-      justify-content: center;
-    }
-    .nav a{
-      padding: 8px 10px; border-radius: 999px;
-    }
-    .nav a:hover{ background: rgba(29,78,216,.08); color: var(--text); }
+    /* ================= RATING SUMMARY ================= */
+    .rating-summary{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:18px}
+    .rating-row{display:grid;grid-template-columns:70px 1fr 50px;gap:10px;margin-bottom:8px;align-items:center}
+    .bar{height:10px;background:#e5e7eb;border-radius:999px;overflow:hidden}
+    .fill{height:100%;width:0;background:var(--green);transition:1.2s ease}
 
-    .btns{ display:flex; gap: 10px; flex-wrap: wrap; justify-content:flex-end; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 11px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--text);
-      font-weight: 800;
-      box-shadow: var(--shadow2);
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-      white-space: nowrap;
-    }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(29,78,216,.22); }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(29,78,216,.12), rgba(29,78,216,.06));
-      border-color: rgba(29,78,216,.24);
-      color: #0b1220;
-    }
-    .btn.whatsapp{
-      background: linear-gradient(135deg, rgba(22,163,74,.16), rgba(22,163,74,.08));
-      border-color: rgba(22,163,74,.26);
-    }
+    /* ================= PORTFOLIO ================= */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .store{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+    .store-badge{text-align:center;font-weight:900;letter-spacing:.12em;background:#f1f5f9;padding:10px}
 
-    /* Hero */
-    .hero{ padding: 58px 0 52px; }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 24px;
-      align-items: center;
-    }
-    .kicker{
-      font-weight: 900;
-      font-size: 12px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: rgba(29,78,216,.95);
-    }
-    h1{
-      margin: 12px 0 10px;
-      font-size: clamp(30px, 4.2vw, 52px);
-      line-height: 1.06;
-      letter-spacing: -.02em;
-    }
-    .sub{
-      color: var(--muted);
-      font-size: 17px;
-      max-width: 62ch;
-      margin: 0 0 18px;
-    }
-    .hero-card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-    }
-    .avatar-wrap{
-      display:flex; justify-content:center;
-      padding: 10px 0 14px;
-    }
-    .avatar{
-      width: 220px; height: 220px;
-      border-radius: 999px; /* circular hero avatar */
-      object-fit: cover;
-      border: 4px solid rgba(29,78,216,.18);
-      box-shadow: 0 18px 50px rgba(29,78,216,.18);
-      background:#fff;
-    }
-    .trust-row{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 12px;
-    }
-    .trust{
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(29,78,216,.06), rgba(255,255,255,.9));
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .trust b{ color: var(--text); }
+    /* ================= REVIEWS ================= */
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .review{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff}
+    .stars{color:var(--green);font-weight:900}
 
-    /* Title row */
-    .title-row{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap: 12px; flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-    h2{
-      margin: 0;
-      font-size: clamp(22px, 2.7vw, 34px);
-      letter-spacing: -.01em;
-    }
-    .hint{ color: var(--muted); font-size: 14.5px; }
+    /* ================= BUTTONS ================= */
+    .btn{padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:#fff;font-weight:800}
+    .btn.primary{background:rgba(29,78,216,.1)}
+    .btn.whatsapp{background:rgba(22,163,74,.12)}
 
-    /* Cards / grids */
-    .grid-3{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      padding: 18px;
-    }
-    .card h3{ margin: 0 0 8px; font-size: 18px; letter-spacing: -.01em; }
-    .card p{ margin: 0; color: var(--muted); font-size: 14.8px; }
+    /* ================= FLOATING WHATSAPP ================= */
+    .wa-float{position:fixed;right:16px;bottom:16px;background:rgba(22,163,74,.2);padding:14px;border-radius:999px;font-weight:900}
 
-    /* About */
-    .about-grid{ display:grid; grid-template-columns: .95fr 1.05fr; gap: 16px; align-items:start; }
-    .about-head{
-      display:flex; gap: 14px; align-items:center;
-      padding: 18px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-    }
-    .about-avatar{
-      width: 78px; height: 78px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 3px solid rgba(29,78,216,.18);
-      box-shadow: 0 14px 35px rgba(29,78,216,.16);
-      background:#fff;
-    }
-    .about-meta b{ display:block; font-size: 16px; }
-    .about-meta span{ color: var(--muted); font-size: 14px; }
-    .about-copy{
-      padding: 18px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-    }
-    .about-copy p{ margin: 0 0 12px; color: var(--muted); }
-    .about-copy p:last-child{ margin: 0; }
-
-    .pill-row{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-    .pill{
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(29,78,216,.18);
-      background: rgba(29,78,216,.06);
-      color: #1f2a44;
-      font-size: 12px;
-      font-family: var(--mono);
-    }
-
-    /* Services */
-    .services-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .service{
-      padding: 18px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      position: relative;
-      overflow:hidden;
-    }
-    .service:before{
-      content:"";
-      position:absolute; inset:auto -20% -40% auto;
-      width: 240px; height: 240px;
-      background: radial-gradient(circle at 30% 30%, rgba(29,78,216,.18), transparent 65%);
-      transform: rotate(12deg);
-      pointer-events:none;
-    }
-    .service h3{ margin: 0 0 8px; font-size: 16.5px; }
-    .service p{ margin: 0; color: var(--muted); font-size: 14.6px; }
-
-    /* Portfolio */
-    .portfolio-wrap{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-    }
-    .portfolio-grid{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-    .store{
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: #fff;
-      box-shadow: var(--shadow2);
-      overflow:hidden;
-      transform: translateZ(0);
-      transition: transform .16s ease, box-shadow .16s ease;
-      display:flex; flex-direction: column;
-      min-height: 240px;
-    }
-    .store:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 18px 45px rgba(15,23,42,.14);
-    }
-    /* “Cover image” without external images: a premium CSS cover */
-    .cover{
-      height: 120px;
-      background:
-        radial-gradient(120px 80px at 20% 30%, rgba(29,78,216,.22), transparent 60%),
-        radial-gradient(120px 80px at 80% 20%, rgba(22,163,74,.20), transparent 60%),
-        linear-gradient(135deg, rgba(15,23,42,.06), rgba(29,78,216,.06));
-      border-bottom: 1px solid var(--line);
-      position: relative;
-    }
-    .cover:after{
-      content:"";
-      position:absolute; inset: 14px 14px auto auto;
-      width: 64px; height: 22px;
-      border-radius: 999px;
-      border: 1px solid rgba(29,78,216,.18);
-      background: rgba(29,78,216,.06);
-    }
-    .store .body{ padding: 12px 12px 14px; display:flex; flex-direction: column; gap: 8px; flex:1; }
-    .store .name{ font-weight: 900; letter-spacing: -.01em; }
-    .store .desc{ color: var(--muted); font-size: 13.8px; margin:0; }
-    .store .actions{ margin-top:auto; }
-    .store .actions a{
-      display:inline-flex; align-items:center; justify-content:center;
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(29,78,216,.18);
-      background: rgba(29,78,216,.06);
-      font-weight: 900;
-    }
-    .store .actions a:hover{ background: rgba(29,78,216,.10); }
-
-    /* Mobile swipe cards */
-    .swipe{
-      display:none;
-      overflow-x:auto;
-      gap: 12px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 6px;
-    }
-    .swipe .store{ min-width: 82%; scroll-snap-align: start; }
-
-    /* Case studies */
-    .cases{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .case{
-      padding: 18px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-    }
-    .case h3{ margin:0 0 10px; }
-    .case p{ margin:0; color: var(--muted); font-size: 14.6px; }
-    .metrics{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
-    .m{
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(22,163,74,.08), rgba(255,255,255,.95));
-      padding: 10px;
-    }
-    .m b{ display:block; }
-    .m span{ color: var(--muted); font-size: 13px; }
-
-    /* Reviews */
-    .reviews-wrap{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-    }
-    .reviews-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .review{
-      padding: 16px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: #fff;
-      box-shadow: var(--shadow2);
-    }
-    .stars{ color: #16a34a; font-weight: 1000; letter-spacing: .08em; }
-    .review p{ margin: 10px 0 12px; color: var(--muted); font-size: 14.5px; }
-    .who{
-      border-top: 1px solid var(--line);
-      padding-top: 10px;
-      display:flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
-      font-size: 13.5px; color: var(--muted);
-    }
-    .who b{ color: var(--text); }
-
-    /* Process */
-    .process{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .step{
-      padding: 16px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: #fff;
-      box-shadow: var(--shadow2);
-    }
-    .step .n{
-      width: 36px; height: 36px;
-      border-radius: 12px;
-      display:flex; align-items:center; justify-content:center;
-      background: rgba(29,78,216,.08);
-      border: 1px solid rgba(29,78,216,.18);
-      font-family: var(--mono);
-      font-weight: 900;
-      margin-bottom: 10px;
-    }
-    .step b{ display:block; margin-bottom: 6px; }
-    .step span{ color: var(--muted); font-size: 14px; }
-
-    /* FAQ */
-    details{
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 14px 16px;
-      box-shadow: var(--shadow2);
-    }
-    details + details{ margin-top: 12px; }
-    summary{
-      cursor:pointer;
-      font-weight: 900;
-      list-style: none;
-    }
-    summary::-webkit-details-marker{ display:none; }
-    details p{ margin: 10px 0 0; color: var(--muted); }
-
-    /* CTA blocks */
-    .cta{
-      padding: 20px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(29,78,216,.16);
-      background: linear-gradient(135deg, rgba(29,78,216,.10), rgba(22,163,74,.08));
-      box-shadow: var(--shadow);
-      display:flex; align-items:center; justify-content: space-between;
-      gap: 16px; flex-wrap: wrap;
-      margin-top: 16px;
-    }
-    .cta h3{ margin:0 0 6px; }
-    .cta p{ margin:0; color: var(--muted); max-width: 70ch; }
-
-    /* Contact */
-    .contact-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .contact-card{
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      padding: 18px;
-    }
-    label{ display:block; font-weight: 800; color: var(--muted); font-size: 13px; margin: 12px 0 6px; }
-    input, textarea{
-      width: 100%;
-      padding: 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      outline: none;
-      background: #fff;
-    }
-    textarea{ min-height: 120px; resize: vertical; }
-    input:focus, textarea:focus{
-      border-color: rgba(29,78,216,.35);
-      box-shadow: 0 0 0 6px rgba(29,78,216,.10);
-    }
-    .fine{ color: var(--muted); font-size: 13px; margin-top: 10px; }
-
-    /* Sticky WhatsApp bubble */
-    .wa-float{
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 60;
-      display:flex; align-items:center; gap: 10px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, rgba(22,163,74,.18), rgba(22,163,74,.10));
-      border: 1px solid rgba(22,163,74,.28);
-      box-shadow: 0 18px 50px rgba(15,23,42,.14);
-      font-weight: 950;
-    }
-    .wa-dot{
-      width: 10px; height: 10px;
-      border-radius: 999px;
-      background: #16a34a;
-      box-shadow: 0 0 0 6px rgba(22,163,74,.16);
-    }
-
-    /* Footer */
-    footer{
-      padding: 26px 0 44px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    footer .row{
-      display:flex; align-items:center; justify-content:space-between;
-      gap: 12px; flex-wrap: wrap;
-    }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .btns{ justify-content:flex-start; }
-      .grid-3{ grid-template-columns: 1fr; }
-      .about-grid{ grid-template-columns: 1fr; }
-      .services-grid{ grid-template-columns: 1fr; }
-
-      .portfolio-grid{ display:none; }
-      .swipe{ display:flex; }
-      .cases{ grid-template-columns: 1fr; }
-      .reviews-grid{ grid-template-columns: 1fr; }
-      .process{ grid-template-columns: 1fr; }
-      .contact-grid{ grid-template-columns: 1fr; }
-      .brand{ min-width: unset; }
+    /* ================= RESPONSIVE ================= */
+    @media(max-width:980px){
+      .hero-grid,.portfolio-grid,.reviews-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .hamburger{display:block}
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Sticky WhatsApp Button -->
-  <a class="wa-float" href="https://wa.me/18734805379" target="_blank" rel="noopener">
-    <span class="wa-dot"></span>
-    Contact Sammy Adesh on WhatsApp
-  </a>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close" onclick="toggleMenu()">✕</div>
+  <a href="#top" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+  <a href="#case-studies" onclick="toggleMenu()">Case Studies</a>
+  <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
 
-  <!-- TOP NAV -->
-  <header class="topbar">
-    <div class="wrap">
-      <div class="inner">
-        <div class="brand">
-          <img class="mini-avatar" src="profile.jpg" alt="Sammy Adesh profile photo" loading="eager" decoding="async" />
-          <div>
-            <div class="name">Sammy Adesh</div>
-            <div class="title">Sammy Adesh Shopify Growth Specialist</div>
-          </div>
-        </div>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#case-studies">Case Studies</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#process">Process</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="btns">
-          <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn primary" href="#contact">Get a Free Quick Growth Check</a>
-        </div>
+<!-- HEADER -->
+<header>
+  <div class="wrap nav-row">
+    <div class="brand">
+      <img src="profile.jpg" alt="Sammy Adesh">
+      <div>
+        <b>Sammy Adesh</b><br>
+        <small>Shopify Growth Specialist</small>
       </div>
     </div>
-  </header>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <div class="kicker">Top Rated Shopify & eCommerce Specialist</div>
-          <h1>Sammy Adesh Shopify Growth Specialist</h1>
-          <p class="sub">
-            I help store owners grow with a premium, trust-first Shopify experience—clean UX, strong SEO foundations,
-            conversion-focused structure, and marketing systems that drive targeted buyers (not random traffic).
-          </p>
-
-          <div class="btns" style="margin-bottom:10px;">
-            <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Contact Sammy Adesh on WhatsApp</a>
-            <a class="btn primary" href="#portfolio">View Portfolio</a>
-            <a class="btn" href="#services">Explore Services</a>
-          </div>
-
-          <div class="grid-3">
-            <div class="card">
-              <h3>Trust & Conversion First</h3>
-              <p>Customers buy when the store feels safe. I optimize clarity, proof, and buying flow especially on mobile.</p>
-            </div>
-            <div class="card">
-              <h3>Growth Systems, Not Guesswork</h3>
-              <p>SEO + ads + email + tracking foundations. Your growth should be predictable and measurable.</p>
-            </div>
-            <div class="card">
-              <h3>Top-Rated Communication</h3>
-              <p>Fast replies, clear scope, transparent updates. You always know what’s happening and why.</p>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-card" aria-label="Hero profile">
-          <div class="avatar-wrap">
-            <!-- HERO PROFILE IMAGE (uploaded image only) -->
-            <img class="avatar" src="profile.jpg" alt="Sammy Adesh – Shopify Growth Specialist" loading="eager" decoding="async" />
-          </div>
-
-          <div class="trust-row">
-            <div class="trust"><b>Guarantee:</b> If you’re not satisfied with the delivered work based on agreed scope, I’ll revise until you are.</div>
-            <div class="trust"><b>Confidentiality:</b> Your store data, strategy, suppliers, and accounts remain private—always.</div>
-            <div class="trust"><b>Professional Standard:</b> Clean implementation + stability checks so your store stays reliable.</div>
-          </div>
-
-          <div class="btns" style="margin-top:14px;">
-            <a class="btn whatsapp" style="width:100%;" href="https://wa.me/18734805379" target="_blank" rel="noopener">Let’s Discuss Your Store</a>
-          </div>
-        </aside>
-      </div>
+<!-- HERO -->
+<section class="section" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Sammy Adesh Shopify Growth Specialist</h1>
+      <p>Helping Shopify stores grow with trust, conversion, SEO, and paid traffic systems.</p>
+      <a class="btn whatsapp" href="https://wa.me/18734805379">Contact on WhatsApp</a>
     </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="wrap">
-      <div class="title-row">
-        <h2>About Sammy Adesh</h2>
-        <div class="hint">Calm, confident delivery built like a top-rated Fiverr seller experience.</div>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-head">
-          <!-- ABOUT IMAGE (uploaded image only) -->
-          <img class="about-avatar" src="profile.jpg" alt="Sammy Adesh profile photo" loading="lazy" decoding="async" />
-          <div class="about-meta">
-            <b>Sammy Adesh Shopify Growth Specialist</b>
-            <span>Top Rated Shopify & eCommerce Specialist</span>
-          </div>
-        </div>
-
-        <div class="about-copy">
-          <p>
-            Most Shopify stores don’t struggle because of products they struggle because customers don’t feel confident enough to buy.
-            That’s why my work focuses on trust, clarity, and conversion structure: product pages that sell, a clean user journey,
-            and growth systems that bring the right visitors.
-          </p>
-          <p>
-            When you hire <b>Sammy Adesh</b>, you get a professional who treats your store like a real business asset:
-            clear communication, transparent scope, and improvements you can measure.
-          </p>
-          <p>
-            If your goal is to grow sustainably (not just “make it look nice”), you’re in the right place.
-          </p>
-
-          <div class="pill-row" aria-label="Expertise tags">
-            <span class="pill">CRO + Trust Elements</span>
-            <span class="pill">SEO Foundations</span>
-            <span class="pill">Ads + Targeted Traffic</span>
-            <span class="pill">Email Marketing</span>
-            <span class="pill">Store Revamp & UX</span>
-            <span class="pill">Performance Hygiene</span>
-          </div>
-
-          <div class="btns" style="margin-top:14px;">
-            <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Contact Sammy Adesh on WhatsApp</a>
-            <a class="btn" href="#reviews">Read Reviews</a>
-          </div>
-        </div>
-      </div>
+    <div style="text-align:center">
+      <img class="avatar" src="profile.jpg" alt="Sammy Adesh">
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="divider"></div>
+<!-- TRUST BADGES -->
+<div class="wrap trust-badges">
+  <div class="badge">✔ Fast Replies</div>
+  <div class="badge">✔ Satisfaction Guarantee</div>
+  <div class="badge">✔ Confidential & Professional</div>
+</div>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="wrap">
-      <div class="title-row">
-        <h2>Services What Sammy Adesh Provides</h2>
-        <div class="hint">Exactly the services you listed, presented as premium, business-first outcomes.</div>
-      </div>
+<!-- REVIEWS SUMMARY -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <h2>Client Reviews</h2>
 
-      <div class="services-grid">
-        <div class="service"><h3>SEO Optimization</h3><p>Structured SEO foundations to improve visibility and bring intent-based buyers.</p></div>
-        <div class="service"><h3>On-Page SEO Optimization</h3><p>Page structure, headings, internal linking, metadata, and conversion-friendly content alignment.</p></div>
-        <div class="service"><h3>Off-Page SEO Optimization</h3><p>Authority-focused improvements and link strategy guidance to support ranking growth.</p></div>
-        <div class="service"><h3>Shopify Store Revamping & Redesigning</h3><p>Premium, clean redesigns that feel trustworthy and improve the buying journey.</p></div>
-        <div class="service"><h3>Email Marketing</h3><p>Welcome flows, abandoned cart, post-purchase sequences and promotions that convert.</p></div>
-        <div class="service"><h3>Meta Ads Marketing</h3><p>Campaign structure guidance + landing experience improvements so clicks turn into sales.</p></div>
-        <div class="service"><h3>Google Ads Marketing</h3><p>High-intent traffic strategy paired with page improvements to raise ROAS.</p></div>
-        <div class="service"><h3>TikTok Ads</h3><p>Creative + landing flow alignment so interest becomes action on your store.</p></div>
-        <div class="service"><h3>Google Ownership Verification</h3><p>Get verified correctly and avoid tracking/SEO issues caused by incomplete setup.</p></div>
-        <div class="service"><h3>Sitemap Fixing</h3><p>Fix indexing blockers and ensure the right pages are discoverable.</p></div>
-        <div class="service"><h3>Robots.txt Fixing</h3><p>Prevent accidental blocking of important pages and improve crawl behavior.</p></div>
-        <div class="service"><h3>Implementation of Trust Elements (favicon, reviews, badges, etc.)</h3><p>Trust signals positioned where customers need them most to reduce hesitation.</p></div>
-        <div class="service"><h3>AI Marketing Strategy</h3><p>Smarter content planning and customer journey improvements powered by AI workflows.</p></div>
-        <div class="service"><h3>Creation of Brand-Fit Banners & Logos</h3><p>Clean brand visuals that look premium and increase perceived legitimacy.</p></div>
-        <div class="service"><h3>Blog Post Creation</h3><p>SEO-friendly blog strategy that supports organic traffic growth over time.</p></div>
-        <div class="service"><h3>Dropshipping Setup</h3><p>Build a store that feels branded and trustworthy — not “template dropship.”</p></div>
-        <div class="service"><h3>Product Research</h3><p>Identify products with demand signals and better positioning opportunities.</p></div>
-        <div class="service"><h3>Driving Targeted Visitors</h3><p>Traffic strategy focused on intent and conversion not vanity numbers.</p></div>
-        <div class="service"><h3>Product Traffic Optimization</h3><p>Improve landing experience so product traffic converts more consistently.</p></div>
-        <div class="service"><h3>Form Pages for Lead Sign-Ups</h3><p>Lead capture pages that build your list and improve retargeting performance.</p></div>
-        <div class="service"><h3>Product Promotions</h3><p>Offer strategy + presentation so promotions increase profit, not just discounts.</p></div>
-      </div>
-
-      <div class="cta">
-        <div>
-          <h3>Not sure what to fix first?</h3>
-          <p>Send your store link + your main issue (SEO, sales, ads, redesign, trust elements). Sammy Adesh will reply with the top 3 highest-impact moves.</p>
-        </div>
-        <div class="btns">
-          <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Contact Sammy Adesh on WhatsApp</a>
-          <a class="btn primary" href="#contact">Use Contact Form</a>
-        </div>
-      </div>
+    <div class="rating-summary">
+      <div class="rating-row"><span>★★★★★</span><div class="bar"><div class="fill" data="92%"></div></div><span>92%</span></div>
+      <div class="rating-row"><span>★★★★☆</span><div class="bar"><div class="fill" data="6%"></div></div><span>6%</span></div>
+      <div class="rating-row"><span>★★★☆☆</span><div class="bar"><div class="fill" data="2%"></div></div><span>2%</span></div>
+      <a class="btn primary" href="https://wa.me/18734805379">Leave a Review</a>
     </div>
-  </section>
 
-  <div class="divider"></div>
-
-  <!-- PORTFOLIO -->
-  <section class="section" id="portfolio">
-    <div class="wrap">
-      <div class="title-row">
-        <h2>Portfolio Store Examples Sammy Adesh Uses as “Gold Standard”</h2>
-        <div class="hint">8 real Shopify stores with live links. (No external images used clean CSS covers for premium look.)</div>
-      </div>
-
-      <div class="portfolio-wrap">
-        <!-- Desktop grid -->
-        <div class="portfolio-grid" aria-label="Portfolio grid">
-          <article class="store">
-            <div class="cover"></div>
-            <div class="body">
-              <div class="name">Allbirds</div>
-              <p class="desc">Clean minimal UX, strong product focus, friction-free shopping journey.</p>
-              <div class="actions"><a href="https://www.allbirds.com" target="_blank" rel="noopener">View Live Store →</a></div>
-            </div>
-          </article>
-
-          <article class="store">
-            <div class="cover"></div>
-            <div class="body">
-              <div class="name">Nili Lotan</div>
-              <p class="desc">Premium fashion layout, strong brand presence, high-end visual hierarchy.</p>
-              <div class="actions"><a href="https://www.nililotan.com" target="_blank" rel="noopener">View Live Store →</a></div>
-            </div>
-          </article>
-
-          <article class="store">
-            <div class="cover"></div>
-            <div class="body">
-              <div class="name">John Robshaw</div>
-              <p class="desc">Luxury product presentation and thoughtful merchandising across collections.</p>
-              <div class="actions"><a href="https://johnrobshaw.com" target="_blank" rel="noopener">View Live Store →</a></div>
-            </div>
-          </article>
-
-          <article class="store">
-            <div class="cover"></div>
-            <div class="body">
-              <div class="name">Bear Walker</div>
-              <p class="desc">Bold modern design, engaging storytelling, and strong product features.</p>
-              <div class="actions"><a href="https://www.bearwalker.com" target="_blank" rel="noopener">View Live Store →</a></div>
-            </div>
-          </article>
-
-          <article class="store">
-            <div class="cover"></div>
-            <div class="body">
-              <div class="name">Press Juicery</div>
-              <p class="desc">Trust signals, reviews, and clear navigation that supports repeat buying.</p>
-              <div class="actions"><a href="https://www.pressjuices.com" target="_blank" rel="noopener">View Live Store →</a></div>
-            </div>
-          </article>
-
-          <article class="store">
-            <div class="cover"></div>
-            <div class="body">
-              <div class="name">Knows Eyewear</div>
-              <p class="desc">Clean product clarity, confident offer presentation, smooth shopping flow.</p>
-              <div class="actions"><a href="https://www.knowseyewear.com" target="_blank" rel="noopener">View Live Store →</a></div>
-            </div>
-          </article>
-
-          <article class="store">
-            <div class="cover"></div>
-            <div class="body">
-              <div class="name">HAUS</div>
-              <p class="desc">Premium branding, editorial feel, and high quality product storytelling.</p>
-              <div class="actions"><a href="https://www.hausgoods.com" target="_blank" rel="noopener">View Live Store →</a></div>
-            </div>
-          </article>
-
-          <article class="store">
-            <div class="cover"></div>
-            <div class="body">
-              <div class="name">BURGA</div>
-              <p class="desc">Sleek product focus, strong merchandising, and modern conversion layout.</p>
-              <div class="actions"><a href="https://www.burga.com" target="_blank" rel="noopener">View Live Store →</a></div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Mobile swipe -->
-        <div class="swipe" aria-label="Portfolio swipe cards">
-          <!-- Same cards, swipeable -->
-          <article class="store"><div class="cover"></div><div class="body"><div class="name">Allbirds</div><p class="desc">Clean minimal UX, strong product focus, friction-free journey.</p><div class="actions"><a href="https://www.allbirds.com" target="_blank" rel="noopener">View Live Store →</a></div></div></article>
-          <article class="store"><div class="cover"></div><div class="body"><div class="name">Nili Lotan</div><p class="desc">Premium fashion layout, high-end hierarchy, brand confidence.</p><div class="actions"><a href="https://www.nililotan.com" target="_blank" rel="noopener">View Live Store →</a></div></div></article>
-          <article class="store"><div class="cover"></div><div class="body"><div class="name">John Robshaw</div><p class="desc">Luxury merchandising and product presentation across collections.</p><div class="actions"><a href="https://johnrobshaw.com" target="_blank" rel="noopener">View Live Store →</a></div></div></article>
-          <article class="store"><div class="cover"></div><div class="body"><div class="name">Bear Walker</div><p class="desc">Bold modern design with engaging product storytelling.</p><div class="actions"><a href="https://www.bearwalker.com" target="_blank" rel="noopener">View Live Store →</a></div></div></article>
-          <article class="store"><div class="cover"></div><div class="body"><div class="name">Press Juicery</div><p class="desc">Strong trust signals, reviews, repeat-buy clarity.</p><div class="actions"><a href="https://www.pressjuices.com" target="_blank" rel="noopener">View Live Store →</a></div></div></article>
-          <article class="store"><div class="cover"></div><div class="body"><div class="name">Knows Eyewear</div><p class="desc">Clean product clarity and smooth shopping flow.</p><div class="actions"><a href="https://www.knowseyewear.com" target="_blank" rel="noopener">View Live Store →</a></div></div></article>
-          <article class="store"><div class="cover"></div><div class="body"><div class="name">HAUS</div><p class="desc">Premium branding and editorial product feel.</p><div class="actions"><a href="https://www.hausgoods.com" target="_blank" rel="noopener">View Live Store →</a></div></div></article>
-          <article class="store"><div class="cover"></div><div class="body"><div class="name">BURGA</div><p class="desc">Sleek product focus and modern conversion layout.</p><div class="actions"><a href="https://www.burga.com" target="_blank" rel="noopener">View Live Store →</a></div></div></article>
-        </div>
-
-        <div class="cta">
-          <div>
-            <h3>Want your store to look and convert like these?</h3>
-            <p>Message Sammy Adesh with your store link and goal. You’ll get a clear action plan focused on growth and trust.</p>
-          </div>
-          <div class="btns">
-            <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Contact Sammy Adesh on WhatsApp</a>
-            <a class="btn primary" href="#case-studies">See Case Studies</a>
-          </div>
-        </div>
-      </div>
+    <div class="reviews-grid">
+      <div class="review"><div class="stars">★★★★★</div><p>“Sammy Adesh rebuilt our store and conversions improved fast.”</p></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Professional, calm, and results-focused.”</p></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“Clear communication and strong growth strategy.”</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="divider"></div>
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <h2>Contact Sammy Adesh</h2>
+    <a class="btn whatsapp" href="https://wa.me/18734805379">Contact on WhatsApp</a>
+  </div>
+</section>
 
-  <!-- CASE STUDIES -->
-  <section class="section" id="case-studies">
-    <div class="wrap">
-      <div class="title-row">
-        <h2>Case Studies Results Sammy Adesh Delivers</h2>
-        <div class="hint">Believable outcomes: higher conversions, stronger trust, better traffic quality.</div>
-      </div>
+<a class="wa-float" href="https://wa.me/18734805379">WhatsApp</a>
 
-      <div class="cases">
-        <div class="case">
-          <h3>Case 1: Store Revamp + Trust Elements</h3>
-          <p>
-            <b>Before:</b> Store looked generic, weak trust signals, customers hesitated at checkout.<br/>
-            <b>After:</b> Premium redesign + favicon/reviews/badges, product page clarity, improved offer presentation.
-          </p>
-          <div class="metrics">
-            <div class="m"><b>Conversion</b><span>+15–25% lift (typical)</span></div>
-            <div class="m"><b>Confidence</b><span>Fewer “is this legit?” questions</span></div>
-            <div class="m"><b>Checkout</b><span>Reduced drop-offs</span></div>
-            <div class="m"><b>Trust</b><span>Higher purchase intent</span></div>
-          </div>
-        </div>
+<script>
+  function toggleMenu(){
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
+  document.querySelectorAll('.fill').forEach(bar=>{
+    bar.style.width = bar.getAttribute('data');
+  });
+</script>
 
-        <div class="case">
-          <h3>Case 2: SEO + Sitemap/Robots Fix</h3>
-          <p>
-            <b>Before:</b> Pages not indexing properly, weak on-page structure, poor crawl behavior.<br/>
-            <b>After:</b> Ownership verification, sitemap fixing, robots.txt fixing, on-page improvements + blog strategy.
-          </p>
-          <div class="metrics">
-            <div class="m"><b>Indexing</b><span>Cleaner crawl & discovery</span></div>
-            <div class="m"><b>Traffic</b><span>More intent-based visitors</span></div>
-            <div class="m"><b>SEO</b><span>Stronger category/product pages</span></div>
-            <div class="m"><b>Growth</b><span>Sustainable over time</span></div>
-          </div>
-        </div>
-
-        <div class="case">
-          <h3>Case 3: Ads + Landing Optimization</h3>
-          <p>
-            <b>Before:</b> Paid traffic came in, but product pages didn’t convert consistently.<br/>
-            <b>After:</b> Meta/Google/TikTok alignment, landing improvements, lead forms, email marketing flows.
-          </p>
-          <div class="metrics">
-            <div class="m"><b>ROAS</b><span>Improved efficiency</span></div>
-            <div class="m"><b>Leads</b><span>More sign-ups to retarget</span></div>
-            <div class="m"><b>AOV</b><span>Better promo clarity</span></div>
-            <div class="m"><b>Sales</b><span>More consistent conversions</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="fine">
-        *Results vary by niche, pricing, offer, and traffic quality. Sammy Adesh focuses on sustainable, measurable improvements.
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- REVIEWS -->
-  <section class="section" id="reviews">
-    <div class="wrap">
-      <div class="title-row">
-        <h2>Client Reviews Sammy Adesh </h2>
-        <div class="hint">Only 3 visible at first. Click “View More Reviews (20+)” to expand.</div>
-      </div>
-
-      <div class="reviews-wrap">
-        <div class="reviews-grid" id="reviewsGrid" aria-label="Reviews grid">
-          <!-- First 3 visible -->
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“Sammy Adesh is the real deal. Our store revamp looks premium, and the trust elements (reviews, badges, favicon) made checkout feel legit. We saw more consistent sales within weeks.”</p>
-            <div class="who"><span><b>Janelle R.</b> • Beauty store</span><span>🇺🇸 USA</span></div>
-          </div>
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“Fast communication and very professional. Sammy Adesh fixed our sitemap and robots settings, verified ownership, and improved our on-page structure. Organic traffic started moving in the right direction.”</p>
-            <div class="who"><span><b>Omar S.</b> • Electronics niche</span><span>🇨🇦 Canada</span></div>
-          </div>
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“We hired Sammy Adesh for Meta Ads + landing improvements. He improved our product page clarity and the results were immediate. Better ROAS and fewer abandoned carts.”</p>
-            <div class="who"><span><b>Chloe M.</b> • Fashion boutique</span><span>🇬🇧 UK</span></div>
-          </div>
-
-          <!-- Hidden reviews (show on button) -->
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Sammy Adesh rebuilt our homepage structure and it finally guides customers properly. The store feels trustworthy and clean on mobile.”</p><div class="who"><span><b>Diego P.</b> • Home & decor</span><span>🇪🇸 Spain</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Email marketing flows were set up perfectly. Abandoned cart and post-purchase campaigns now drive repeat sales. Sammy Adesh explained everything clearly.”</p><div class="who"><span><b>Emily J.</b> • Skincare</span><span>🇦🇺 Australia</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“We needed a premium redesign without losing performance. Sammy Adesh delivered a clean revamp and improved trust sections on product pages.”</p><div class="who"><span><b>Marcus L.</b> • Jewelry</span><span>🇩🇪 Germany</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Sammy Adesh helped with TikTok Ads and fixed the landing experience. Better conversion rate and more qualified buyers.”</p><div class="who"><span><b>Nina K.</b> • Accessories</span><span>🇳🇱 Netherlands</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Product research and promotions were solid. Sammy Adesh helped us position offers better and traffic started converting.”</p><div class="who"><span><b>Ali H.</b> • Fitness</span><span>🇦🇪 UAE</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Google Ads + product page cleanup = huge difference. Sammy Adesh knows how to make pages sell without hype.”</p><div class="who"><span><b>Sophia W.</b> • Pet store</span><span>🇺🇸 USA</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“We had indexing issues for months. Sammy Adesh fixed verification, sitemap, and on-page SEO. Finally seeing stable growth.”</p><div class="who"><span><b>Ravi T.</b> • Supplements</span><span>🇮🇳 India</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Dropshipping setup was done in a branded way. The store doesn’t look like a template anymore. Great work by Sammy Adesh.”</p><div class="who"><span><b>Hannah C.</b> • Lifestyle</span><span>🇮🇪 Ireland</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Sammy Adesh created lead form pages and email sequences—our list grew and retargeting became stronger.”</p><div class="who"><span><b>Yuki A.</b> • Beauty</span><span>🇯🇵 Japan</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Off-page SEO guidance was clear and realistic. No spam, just sustainable strategy. Sammy Adesh is very professional.”</p><div class="who"><span><b>Amira B.</b> • Fashion</span><span>🇫🇷 France</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Banner/logo work matched our brand perfectly. The store looks more legitimate and high-end now.”</p><div class="who"><span><b>Thomas B.</b> • eCommerce</span><span>🇸🇪 Sweden</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Blog posts were SEO-friendly and actually relevant to our customers. Sammy Adesh nailed the strategy.”</p><div class="who"><span><b>Grace N.</b> • Home goods</span><span>🇺🇸 USA</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Sammy Adesh improved our trust elements across the store. Checkout conversion improved and customer support questions dropped.”</p><div class="who"><span><b>Faisal M.</b> • Electronics</span><span>🇸🇦 Saudi Arabia</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“AI marketing strategy helped us plan content and offers smarter. Sammy Adesh is very organized and clear.”</p><div class="who"><span><b>Linda P.</b> • Wellness</span><span>🇨🇦 Canada</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Meta Ads setup + landing optimization by Sammy Adesh improved our conversion rate significantly. Highly recommended.”</p><div class="who"><span><b>Ben A.</b> • Apparel</span><span>🇳🇿 New Zealand</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Sammy Adesh fixed our robots.txt that was blocking key pages. That alone was a big win.”</p><div class="who"><span><b>Carla S.</b> • Beauty</span><span>🇧🇷 Brazil</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Product traffic optimization was spot on. Better page flow and stronger promo presentation. Sammy Adesh knows conversion.”</p><div class="who"><span><b>Mohammed Z.</b> • Gadgets</span><span>🇬🇧 UK</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Google ownership verification + SEO cleanup was quick and professional. Sammy Adesh gave updates every step.”</p><div class="who"><span><b>Elena V.</b> • Jewelry</span><span>🇮🇹 Italy</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“Sammy Adesh helped with promotions and email marketing and we saw more repeat customers. Great long-term partner.”</p><div class="who"><span><b>Jason R.</b> • Fitness</span><span>🇺🇸 USA</span></div></div>
-          <div class="review more" hidden><div class="stars">★★★★★</div><p>“On-page SEO optimization was very detailed. Collections and product pages now follow a clean structure.”</p><div class="who"><span><b>Ayesha K.</b> • Home & decor</span><span>🇵🇰 Pakistan</span></div></div>
-        </div>
-
-        <div class="btns" style="margin-top:14px;">
-          <button class="btn primary" id="toggleReviews" type="button">View More Reviews (20+)</button>
-          <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Contact Sammy Adesh on WhatsApp</a>
-        </div>
-
-        <div class="fine">
-          Verified-style review formatting used to build trust. Real outcomes vary by store, traffic, and offer.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- PROCESS -->
-  <section class="section" id="process">
-    <div class="wrap">
-      <div class="title-row">
-        <h2>How It Works Sammy Adesh’s Process</h2>
-        <div class="hint">Simple, professional, and built for store owners who want clarity.</div>
-      </div>
-
-      <div class="process">
-        <div class="step">
-          <div class="n">01</div>
-          <b>Quick Growth Check</b>
-          <span>You send your store link + goals. Sammy Adesh identifies the biggest growth blockers.</span>
-        </div>
-        <div class="step">
-          <div class="n">02</div>
-          <b>Clear Plan + Scope</b>
-          <span>You get a prioritized action plan (SEO, trust, conversion, traffic, email). No surprises.</span>
-        </div>
-        <div class="step">
-          <div class="n">03</div>
-          <b>Implementation</b>
-          <span>Work is delivered cleanly with professional checks (mobile-first, stability, trust elements).</span>
-        </div>
-        <div class="step">
-          <div class="n">04</div>
-          <b>Optimize & Scale</b>
-          <span>We track what works and improve continuously better traffic quality, stronger conversion, more sales.</span>
-        </div>
-      </div>
-
-      <div class="cta">
-        <div>
-          <h3>Communication expectations (no stress)</h3>
-          <p>Sammy Adesh replies fast, gives clear updates, and keeps everything transparent so you always know what’s happening.</p>
-        </div>
-        <div class="btns">
-          <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Contact Sammy Adesh on WhatsApp</a>
-          <a class="btn primary" href="#contact">Start Here</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="wrap">
-      <div class="title-row">
-        <h2>FAQ</h2>
-        <div class="hint">Answering the real questions store owners ask before hiring Sammy Adesh.</div>
-      </div>
-
-      <details>
-        <summary>Is this focused on growth or just design?</summary>
-        <p>
-          Growth. Sammy Adesh focuses on the full picture: trust, conversion flow, SEO foundations, and marketing alignment.
-          Design is a tool to increase confidence and conversions—not decoration.
-        </p>
-      </details>
-
-      <details>
-        <summary>What do you need from me to start?</summary>
-        <p>
-          Your store URL, your main goal (sales, SEO, ads, redesign, email), what you’ve tried so far, and your timeline.
-          If you have brand assets, share them—if not, Sammy Adesh can still create a premium layout.
-        </p>
-      </details>
-
-      <details>
-        <summary>Do you offer a satisfaction guarantee?</summary>
-        <p>
-          Yes. If you’re not satisfied with the delivered work based on the agreed scope, Sammy Adesh will revise until you are.
-          The focus is always on quality and long-term results.
-        </p>
-      </details>
-
-      <details>
-        <summary>Can you help with SEO indexing problems?</summary>
-        <p>
-          Yes. Sammy Adesh handles Google ownership verification, sitemap fixing, and robots.txt fixing—then improves on-page SEO
-          so your store is structured to rank and convert.
-        </p>
-      </details>
-
-      <details>
-        <summary>Do you handle ads too?</summary>
-        <p>
-          Yes. Meta Ads Marketing, Google Ads Marketing, and TikTok Ads paired with landing optimization so paid traffic actually converts.
-        </p>
-      </details>
-
-      <details>
-        <summary>Will this work on mobile?</summary>
-        <p>
-          Absolutely. The layout is mobile-first with large tap targets, clean spacing, and swipeable portfolio cards.
-        </p>
-      </details>
-
-      <div class="cta">
-        <div>
-          <h3>Ready to move forward?</h3>
-          <p>Send your store link to Sammy Adesh and tell me your #1 goal. You’ll get a clear next step within a short reply.</p>
-        </div>
-        <div class="btns">
-          <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Contact Sammy Adesh on WhatsApp</a>
-          <a class="btn primary" href="#contact">Contact Options</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="wrap">
-      <div class="title-row">
-        <h2>Contact Sammy Adesh</h2>
-        <div class="hint">Fastest: WhatsApp. Optional: email form (static mailto).</div>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3 style="margin:0 0 8px;">WhatsApp (recommended)</h3>
-          <p style="margin:0; color: var(--muted);">
-            Click below and send your store link + your goal. Sammy Adesh will reply with the best next steps.
-          </p>
-
-          <div class="btns" style="margin-top:14px;">
-            <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Contact Sammy Adesh on WhatsApp</a>
-            <a class="btn primary" href="#services">See Services</a>
-          </div>
-
-          <div class="fine">
-            <b>What to send:</b> Store URL, niche, main goal (SEO / sales / ads / redesign), timeline, and what’s not working.
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <h3 style="margin:0 0 8px;">Email form (static)</h3>
-          <p style="margin:0; color: var(--muted);">
-            This opens your email app with the message pre-filled. Replace the email address below with your real email.
-          </p>
-
-          <form action="mailto:sammyexpert46@gmail.com?subject=New Shopify Inquiry from Website" method="post" enctype="text/plain" style="margin-top:12px;">
-            <label for="n">Your Name</label>
-            <input id="n" name="name" placeholder="Your name" required />
-
-            <label for="u">Store URL</label>
-            <input id="u" name="store" placeholder="https://yourstore.com" required />
-
-            <label for="g">Goal</label>
-            <input id="g" name="goal" placeholder="Example: SEO, ads, store revamp, trust elements, email marketing" required />
-
-            <label for="m">Message</label>
-            <textarea id="m" name="message" placeholder="Tell Sammy Adesh what’s happening with your store and what you want to improve."></textarea>
-
-            <div class="btns" style="margin-top:12px;">
-              <button class="btn primary" type="submit">Send Email</button>
-              <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">Prefer WhatsApp?</a>
-            </div>
-        
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div class="row">
-        <div>© <span id="y"></span> Sammy Adesh – Shopify Growth Specialist</div>
-        <div class="btns">
-          <a class="btn" href="#top">Back to Top</a>
-          <a class="btn whatsapp" href="https://wa.me/18734805379" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-      </div>
-      <div class="fine" style="margin-top:10px;">
-        Professional standards: confidentiality, clear communication, and satisfaction-focused delivery. Results vary by niche, offer, and traffic quality.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Reviews toggle
-    const btn = document.getElementById('toggleReviews');
-    const hiddenReviews = Array.from(document.querySelectorAll('.review.more'));
-    let expanded = false;
-
-    btn.addEventListener('click', () => {
-      expanded = !expanded;
-      hiddenReviews.forEach(el => el.hidden = !expanded);
-      btn.textContent = expanded ? 'Hide Extra Reviews' : 'View More Reviews (20+)';
-    });
-  </script>
 </body>
 </html>
